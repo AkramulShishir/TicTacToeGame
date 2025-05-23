@@ -3,7 +3,8 @@ const msgContainer = document.querySelector('.msg-container');
 const msg = document.querySelector('.msg');
 const newBtn = document.getElementById("new-btn");
 const resetBtn = document.getElementById("reset-btn");
-
+// 
+// 
 
 const winPattern = [
   [0, 1, 2],
