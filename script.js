@@ -40,6 +40,7 @@ boxes.forEach((box) => {
     if(count === 9) {
       msg.innerText = `Game was a Drow`;
       msgContainer.classList.remove('hide');
+      resetBtn.style.display = "none";
     }
 
   })
@@ -58,7 +59,7 @@ const enableBoxes = () => {
   for (const box of boxes) {
     box.disabled = false;
     box.innerText = "";
-    box.style.backgroundColor = "white"; 
+    box.style.backgroundColor = "white";
   }
 }
 
@@ -69,7 +70,8 @@ const disableBoxes = () => {
 }
 
 const winner = (winner) => {
-  msg.innerText = `Congratulations, \n Winner is ${winner}`
+  msg.innerText = `Congratulations, \n Winner is ${winner}`;
+
 }
 
 
@@ -82,6 +84,7 @@ const chackWinner = () => {
     if(pos1Val != "" && pos2Val != "" && pos3Val != "") {
       if(pos1Val === pos2Val && pos2Val === pos3Val) {
         msgContainer.classList.remove("hide");
+        resetBtn.style.display = "none";
 
         winner(pos1Val)
         disableBoxes();
@@ -90,5 +93,8 @@ const chackWinner = () => {
   }
 }
 
-newBtn.addEventListener("click", resetGame);
+newBtn.addEventListener("click", () => {
+  resetBtn.style.display = "inline";
+  resetGame();
+});
 resetBtn.addEventListener("click", resetGame);
