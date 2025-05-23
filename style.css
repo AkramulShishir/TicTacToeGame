@@ -81,3 +81,18 @@ h1{
   padding: 0 2vmin;
   background-color: var(--primary-color);
 }
+
+@media screen and (max-width: 460px) {
+  h1{
+    margin-top: 3vmin;
+  }
+  .game-container{
+    height: 90vh;
+  }
+  .game{
+    height: 90vmin;
+  }
+  .box{
+    height: 29vmin;
+  }
+}
